@@ -73,3 +73,126 @@ h1 {
 #social a:hover {
   color: var(--color-green);
 }
+
+/*Conteudos page*/
+main {
+  margin: 0 auto;
+  width: 800px;
+}
+
+main h1 {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.card_container {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card_container .card_img img {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+  max-height: 200px;
+}
+
+.card_container .card_content {
+  padding: 1rem;
+}
+
+.card_container .card_content h2 {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+.card_container .card_content p {
+  font-size: 0.8rem;
+}
+
+.card_container .card_content .card_info {
+  padding-top: 0.5rem;
+}
+
+.card_container .card_content .card_info small {
+  background: var(--color-green);
+  padding: 0.2rem 1rem;
+  border-radius: 99px;
+  font-size: 0.6rem;
+}
+
+/*Modal*/
+.modal_overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal {
+  background: transparent;
+  width: 90%;
+  height: 90%;
+  margin: 5vh auto;
+  position: relative;
+  border-radius: 15px;
+}
+.modal.maximize {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin: 0;
+}
+
+.modal .modal_close {
+  position: absolute;
+  right: -0.5rem;
+  top: -0.5rem;
+  background: var(--color-green);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2rem;
+  border-radius: 99px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.modal_close.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+.modal .modal_fullscreen {
+  position: absolute;
+  right: 2rem;
+  top: 1rem;
+  color: black;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.modal_fullscreen i {
+  font-size: 2rem;
+}
+
+.modal_content iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.modal_overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
