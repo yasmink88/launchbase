@@ -36,8 +36,8 @@ server.get("/about", (req, res) => {
   return res.render("about", { profile });
 });
 
-server.get("/course", (req, res) => {
-  const id = req.query.id;
+server.get("/course/:id", (req, res) => {
+  const id = req.params.id;
 
   const post = posts.find((post) => {
     return post.id == id;
