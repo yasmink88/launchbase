@@ -1,0 +1,20 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    
+    <title>Rocketseat | {{ post.title }} </title>
+  
+   {% endblock %}
+
+   {% block content %}
+    <main>
+      <section>
+      <h1>{{ post.title }}</h1>
+
+      <section class="course">
+        
+        <iframe src="https://blog.rocketseat.com.br/{{ post.id }}" frameborder="0"></iframe>
+     
+      </section>
+    </main>
+{% endblock %}

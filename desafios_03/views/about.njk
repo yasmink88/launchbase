@@ -4,18 +4,17 @@
 
 <div id="profile">
       <img
-        src="https://github.com/rocketseat-education.png"
+        src="{{ profile.image }}"
         alt="Profile pics"
       />
-      <h1>Rocketseat Education</h1>
+      <h1>{{ profile.name }}</h1>
       <p>
-        Organização que armazena o código das aplicações e desafios dos
-        bootcamps e de cursos gratuitos da Rocketseat 🚀
+        {{ profile.about }}
       </p>
       <div id="social">
-        <a href="https://www.github.com/yasmink88">Github</a>
-        <a href="https://www.linkedin.com/in/yasminkhalaf">Linkedin</a>
-        <a href="https://www.instagram.com/yasminkhalaf88">Instagram</a>
+        {% for link in profile.links %}
+        <a href="{{ link.url }}">{{ link.name }}</a>
+        {% endfor %}
       </div>
     </div>
 
