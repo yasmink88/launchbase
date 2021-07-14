@@ -1,6 +1,6 @@
 :root {
   --color-yellow: #f66926;
-  --color-grey: #282a36;
+  --color-primary: #427c7e;
 }
 
 * {
@@ -12,9 +12,8 @@
 body {
   width: 100%;
   margin: 0 auto;
-  background: var(--color-grey);
+  background: var(--color-primary);
   font-family: "Roboto", serif;
-  color: #fff;
   line-height: 1.5rem;
 }
 
@@ -78,10 +77,10 @@ header nav a.active {
 
 .card {
   width: 800px;
-  height: 500px;
+  min-height: 500px;
   margin: 4rem auto;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 40% 60%;
   animation: up 1s ease-in-out;
 }
 
@@ -100,7 +99,88 @@ header nav a.active {
   background: white;
 }
 
-.card .image {
-  background: url(https://source.unsplash.com/collection/3465564/900) no-repeat
-    top center / cover;
+.card section,
+.card form {
+  background: white;
+}
+
+.info {
+  padding: 2rem;
+}
+
+.info .item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
+}
+
+.info .item:last-child {
+  border-bottom: none;
+}
+
+.info .item h3 {
+  color: #5a5a5a;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.info .item p {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.info h2 {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--color-primary);
+  font-size: 1rem;
+}
+
+.info p span {
+  padding: 0.3rem 1rem;
+  background-color: var(--color-primary);
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: inline-block;
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/*FORM*/
+
+form input,
+select {
+  width: 100%;
+  outline: none;
+  border: none;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+input[type="radio"] {
+  top: 0.1rem;
+  position: relative;
+  width: initial;
+}
+
+button[type="submit"],
+a.btn_edit {
+  padding: 0.6rem 1.3rem;
+  background: var(--color-yellow);
+  border: none;
+  margin-top: 1rem;
+  font-weight: 700;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  cursor: pointer;
+  color: white;
+}
+
+a.btn_edit {
+  display: block;
+  margin-top: 1rem;
+  text-decoration: none;
+  text-align: center;
 }

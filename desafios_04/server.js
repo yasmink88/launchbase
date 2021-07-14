@@ -19,6 +19,12 @@ nunjucks.configure("views", {
 
 //setting static folder
 server.use(express.static("public"));
+
+//using express urlenconded to parse req.body --> needs to be added before the request
+server.use(express.urlencoded({ extended: true }));
+
+//using routes.js  after calling it up there
 server.use(routes);
+
 //call server at port number
 server.listen(5000);
