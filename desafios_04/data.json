@@ -1,0 +1,34 @@
+{
+  "teachers": [
+    {
+      "id": 1,
+      "avatar": "https://source.unsplash.com/collection/4821422/900",
+      "teacher": "Yasmin",
+      "birthdate": 571104000000,
+      "education": "High School Diploma",
+      "classType": "Online",
+      "subjects": "math, science",
+      "created_at": 1626217533385
+    },
+    {
+      "id": 2,
+      "avatar": "https://source.unsplash.com/collection/4821422/900",
+      "teacher": "Sahrish",
+      "birthdate": 576201600000,
+      "education": "Bachelor's Degree",
+      "classType": "Online",
+      "subjects": "english, math",
+      "created_at": 1626217556775
+    },
+    {
+      "id": 3,
+      "avatar": " https://source.unsplash.com/collection/4821422/900",
+      "teacher": "Sahrish",
+      "birthdate": 174528000000,
+      "education": "Bachelor's Degree",
+      "classType": "Online",
+      "subjects": "english, math",
+      "created_at": 1626224962302
+    }
+  ]
+}

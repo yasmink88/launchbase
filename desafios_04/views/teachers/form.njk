@@ -1,0 +1,37 @@
+    <div class="item">
+        <h3>Avatar URL</h3>
+        <input type="url" name="avatar" placeholder="{{ teacher.avatar }}">
+    </div>
+    <div class="item">
+        <h3>Teacher's Name</h3>
+        <input type="text" name="teacher" placeholder="Teacher's Name" value="{{ teacher.teacher }}">
+    </div>
+    <div class="item">
+        <h3>Birthdate</h3>
+        <input type="date" name="birthdate" value="{{ teacher.birthdate }}">
+    </div>
+    <div class="item">
+        <h3>Education</h3>
+        <select name="education">
+            <option value="High School Diploma" {%if teacher.education == "High School Diploma"%} selected {% endif %}>High school Diploma</option>
+            <option value="Bachelor's Degree"  {%if teacher.education == "Bachelor's Degree"%} selected {% endif %}>Bachelor's Degree</option>
+            <option value="Master's Degree"  {%if teacher.education == "Master's Degree"%} selected {% endif %}>Master's Degree</option>
+            <option value="PHD Degree"  {%if teacher.education == "PHD Degree"%} selected {% endif %}>PHD Degree</option>
+        </select>
+    </div>
+    <div class="item">
+        <h3>Class type</h3>
+        <p>
+            <span><input type="radio" name="classType" value="Online" {%if teacher.classType == "Online" %} checked {%endif%}> Online</span>
+            <span><input type="radio" name="classType" value="Physical" {%if teacher.classType == "Physical" %} checked {%endif%}> Physical</span>
+        </p>
+
+    </div>
+    <div class="item">
+        <h3>Subjects</h3>
+        <p>
+            <input type="text" name="subjects" placeholder="Type your subjects separated by comma" value="{{ teacher.subjects }}">
+        </p>
+    </div>
+    
+    <button type="submit">Salvar</button>

@@ -1,0 +1,43 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+<div class="card">
+    <section class="image" style="background: url({{ teacher.avatar }}) no-repeat
+    top center / cover;">
+    </section>
+    <section class="info">
+        <h2>Details</h2>
+        <div class="item">
+            <h3>Full Name</h3>
+            <p>{{ teacher.teacher }}</p>
+        </div>
+        <div class="item">
+            <h3>Age</h3>
+            <p>{{teacher.birthdate}}</p>
+        </div>
+        <div class="item">
+            <h3>Education</h3>
+            <p>{{ teacher.education }}</p>
+        </div>
+        <div class="item">
+            <h3>Class type</h3>
+            <p>
+               <span><input type="radio" name="classType" value="Online" {%if teacher.classType == "Online" %} checked {%endif%}> Online</span>
+            <span><input type="radio" name="classType" value="Physical" {%if teacher.classType == "Physical" %} checked {%endif%}> Physical</span>
+            </p>
+        </div>
+        <div class="item">
+            <h3>Subjects</h3>
+            {% for subject in teacher.subjects %}
+            <span>{{subject}}</span>
+            {% endfor %}
+        </div>
+        <div class="item">
+            <h3>Since</h3>
+            <p>{{teacher.created_at}}</p>
+        </div>
+
+        <a href="#" class="btn_edit">Edit</a>
+    </section>
+</div>
+{% endblock content %}
